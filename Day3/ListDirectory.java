@@ -16,15 +16,15 @@ public class ListDirectory {
     public static String getPath() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter directory path start with 'C:/' ");
-        String directory = myObj.nextLine();
+        String directory = scan.nextLine();
         return directory;
     }
 
     public static void main(String[] args) {
 
-        File myObj = new File(getPath());
+        File scan = new File(getPath());
         String[] files = scan.list();
-        System.out.println("Here are the files in this directory: ");
+        System.out.println("Here are the files in that directory: ");
 
         for (String file : files) {
             System.out.println(file);
@@ -32,9 +32,4 @@ public class ListDirectory {
     }
 
 }
-
-
-
-
-
 
