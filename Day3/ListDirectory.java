@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class ListDirectory {
 
     public static String getPath() {
-        Scanner myObj = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("Enter directory path start with 'C:/' ");
         String directory = myObj.nextLine();
         return directory;
@@ -23,7 +23,7 @@ public class ListDirectory {
     public static void main(String[] args) {
 
         File myObj = new File(getPath());
-        String[] files = myObj.list();
+        String[] files = scan.list();
         System.out.println("Here are the files in this directory: ");
 
         for (String file : files) {
